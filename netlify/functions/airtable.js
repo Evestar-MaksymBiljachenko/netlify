@@ -17,7 +17,7 @@ export async function handler(event, context) {
   try {
     const body = JSON.parse(event.body);
 
-    const response = await fetch("https://api.airtable.com/v0/tblLJvrMtXCG37ab7/viw7vS5weZHJjF8r7", {
+    const response = await fetch("https://api.airtable.com/v0/appRjxeEcdwiHAsMo/tblLJvrMtXCG37ab7", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${process.env.AIRTABLE_API_KEY}`,
@@ -25,10 +25,9 @@ export async function handler(event, context) {
       },
       body: JSON.stringify({
         fields: {
-          Name: body.name,
-          Email: body.email,
-          Message: body.message,
-          Product: body.product,
+          "Campaign Name": body.name,
+          "Objective": body.email,
+          "Budget": body.message
         },
       }),
     });
