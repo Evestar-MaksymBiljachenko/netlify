@@ -26,9 +26,12 @@ export async function handler(event, context) {
       },
       body: JSON.stringify({
         fields: {
-          "Campaign Name": body.name,
-          "Objective": body.email,
-          "Budget": body.message
+            "Campaign Name":body.name,
+            "Objective": body.email,
+            "Budget": body.message,
+            "Start Date": "2025-09-10",
+            "End Date": "2025-09-15",
+            "Status": "Planned"
         },
       }),
     });
