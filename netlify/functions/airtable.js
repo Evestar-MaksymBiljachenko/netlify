@@ -1,15 +1,11 @@
-
 // netlify/functions/airtable.js
-import fetch from "node-fetch";
-
-const headers = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Methods": "POST,OPTIONS",
-  "Access-Control-Allow-Headers": "Content-Type",
-};
-
 export async function handler(event, context) {
-  // 1. Обробка preflight-запиту
+  const headers = {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "POST,OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type",
+  };
+
   if (event.httpMethod === "OPTIONS") {
     return {
       statusCode: 200,
