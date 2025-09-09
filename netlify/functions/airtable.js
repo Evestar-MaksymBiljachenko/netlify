@@ -17,9 +17,10 @@ export async function handler(event, context) {
   try {
     const body = JSON.parse(event.body);
 
-    const response = await fetch("https://api.airtable.com/v0/appRjxeEcdwiHAsMo/Test", {
+    const response = await fetch("https://api.airtable.com/v0/appRjxeEcdwiHAsMo/tblLJvrMtXCG37ab7", {
       method: "POST",
       headers: {
+        // patIi3m7f0iFjvv30.3b724ca88dd9a5b2aca963309818279ca256a753fb47f24d48f791efa3c19257
         Authorization: `Bearer ${process.env.AIRTABLE_API_KEY}`,
         "Content-Type": "application/json",
       },
